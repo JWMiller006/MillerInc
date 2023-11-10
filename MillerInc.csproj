@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ApplicationIcon>Logo-simple.ico</ApplicationIcon>
+    <SignAssembly>False</SignAssembly>
+    <Authors>Miller Inc; J W Miller</Authors>
+    <Copyright>2023</Copyright>
+    <Description>New version of MillerInc.CSLibrary, used for creating .NET apps</Description>
+    <PackageIcon>Logo-simple.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>preview</LangVersion>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Logo-simple.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Shared\Logo-simple.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Apis" Version="1.64.0-alpha01" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.64.0-alpha01" />
+    <PackageReference Include="Google.Apis.Drive.v3" Version="1.63.0.3155" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.0-rc.2.23479.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
