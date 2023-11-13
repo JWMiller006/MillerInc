@@ -6,6 +6,9 @@ using System.Linq;
 
 namespace MillerInc.Convert.Files
 {
+    /// <summary>
+    /// Class that contains the methods to convert a file to a list of strings, not necessary but handles errors 
+    /// </summary>
     public class FileToList
     {
         /// <summary>

@@ -7,7 +7,8 @@ namespace MillerInc.Convert.Lists
 {
 
     /// <summary>
-    /// Converts Lists from One Type to another type
+    /// Converts Lists from One Type to another type, there are some out of support methods here that don't have any real use; 
+    /// the suggested method is the ConvertTo method and typically not the overload with the conversion function 
     /// </summary>
     public class ListConverter
     {

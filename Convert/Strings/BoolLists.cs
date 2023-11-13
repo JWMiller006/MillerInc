@@ -11,13 +11,13 @@ namespace MillerInc.Convert.Strings
     public class BoolLists
     {
         /// <summary>
-        /// True strings 
+        /// Strings that relate to true
         /// </summary>
         public static List<string> Yea { get; set; } = new() 
         { "yes", "yeah", "true", "y", "e", "s", "Yea", "ok", "okay", "duh", "", " " };
 
         /// <summary>
-        /// False strings 
+        /// Strings that relate to false
         /// </summary>
         public static List<string> Ney { get; set; } = new() 
         { "no", "not", "false", "n", "o", "nah", "nope", "not today", "what do you think?", "exit", "e" };
