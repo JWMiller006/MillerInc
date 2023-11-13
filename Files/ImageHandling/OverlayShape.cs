@@ -103,5 +103,63 @@ namespace MillerInc.Files.ImageHandling
                 return;
             }
         }
+
+        /// <summary>
+        /// Adds a box overtop the bitmap that is input through the function
+        /// </summary>
+        /// <param name="bitmap">the source bitmap </param>
+        /// <param name="centerOfBoxX">the x coordinate of the center of the box</param>
+        /// <param name="centerOfBoxY">the y coordinate of the center of the box</param>
+        /// <param name="width">the width of the box</param>
+        /// <param name="height">this height of the box</param>
+        /// <param name="overlayColor">the color to overlay the box with</param>
+        /// <param name="penSize">this size of the pen to use</param>
+        /// <returns></returns>
+        public static Bitmap AddBox(Bitmap bitmap, float centerOfBoxX, float centerOfBoxY, float width,
+            float height, Color overlayColor, int penSize = 5)
+        {
+            float x = centerOfBoxX;
+            float y = centerOfBoxY;
+            Graphics g = Graphics.FromImage(bitmap);
+            Pen pen = new(overlayColor, penSize);
+            float x1 = (float)(x - (0.5 * width));
+            float y1 = (float)(y - (0.5 * height));
+            float x2 = x1 + width;
+            float y2 = y1 + height;
+            g.DrawLine(pen, x1, y1, x2, y1);
+            g.DrawLine(pen, x2, y1, x2, y2);
+            g.DrawLine(pen, x2, y2, x1, y2);
+            g.DrawLine(pen, x1, y2, x1, y1);
+            return bitmap;
+        }
+
+        /// <summary>
+        /// Adds a box overtop the bitmap that is input through the function
+        /// </summary>
+        /// <param name="bitmap">the source bitmap </param>
+        /// <param name="topLeftX">the x coordinate of the top left corner of the box</param>
+        /// <param name="topLeftY">the y coordinate of the top left corner of the box</param>
+        /// <param name="width">the width of the box</param>
+        /// <param name="height">the height of the box</param>
+        /// <param name="penSize">the size of the pen</param>
+        /// <param name="overlayColor">the color to  overlay the box as</param>
+        /// <returns></returns>
+        public static Bitmap AddBox(Bitmap bitmap, float topLeftX, float topLeftY, float width,
+            float height, int penSize, Color overlayColor)
+        {
+            float x = topLeftX;
+            float y = topLeftY;
+            Graphics g = Graphics.FromImage(bitmap);
+            Pen pen = new(overlayColor, penSize);
+            float x1 = x;
+            float y1 = y;
+            float x2 = x1 + width;
+            float y2 = y1 + height;
+            g.DrawLine(pen, x1, y1, x2, y1);
+            g.DrawLine(pen, x2, y1, x2, y2);
+            g.DrawLine(pen, x2, y2, x1, y2);
+            g.DrawLine(pen, x1, y2, x1, y1);
+            return bitmap;
+        }
     }
 }
