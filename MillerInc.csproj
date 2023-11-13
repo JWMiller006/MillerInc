@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <ApplicationIcon>Logo-simple.ico</ApplicationIcon>
-    <SignAssembly>False</SignAssembly>
+    <SignAssembly>True</SignAssembly>
     <Authors>Miller Inc; J W Miller</Authors>
     <Copyright>2023</Copyright>
     <Description>New version of MillerInc.CSLibrary, used for creating .NET apps</Description>
@@ -13,6 +13,7 @@
   <PropertyGroup>
     <LangVersion>preview</LangVersion>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <AssemblyOriginatorKeyFile>C:\Users\jwmil\source\repos\MillerInc.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Logo-simple.ico" />
