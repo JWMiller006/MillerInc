@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 
-namespace CMDLibrary.Convert.Classes
+namespace MillerInc.Convert.Classes
 {
     /// <summary>
     /// Typicallys an inherited class that is used when the class is suppoed to be loaded back
