@@ -38,5 +38,35 @@ namespace MillerInc.Methods
             return arr;
         }
 
+        /// <summary>
+        /// If an object is comparable, it can be sorted, this algorithm sorts the list from least to greatest
+        /// </summary>
+        /// <param name="list">IComparable List that can be sorted</param>
+        /// <returns>sorted list</returns>
+        public static List<IComparable> OptimizedBubbleSort(List<IComparable> list)
+        {
+            var n = list.Count;
+            bool swapRequired;
+
+            for (int i = 0; i < n - 1; i++)
+            {
+                swapRequired = false;
+
+                for (int j = 0; j < n - i - 1; j++)
+                {
+                    if (list[j].CompareTo(list[j + 1]) > 0)
+                    {
+                        (list[j + 1], list[j]) = (list[j], list[j + 1]);
+                        swapRequired = true;
+                    }
+                }
+                if (!swapRequired)
+                {
+                    break; 
+                }
+            }
+            return list; 
+        }
+
     }
 }
