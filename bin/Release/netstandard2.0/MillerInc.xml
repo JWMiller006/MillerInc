@@ -1,0 +1,938 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MillerInc</name>
+    </assembly>
+    <members>
+        <member name="T:MillerInc.Check">
+            <summary>
+            Contains Basic Functions that are found in other languages that I liked
+            </summary>
+        </member>
+        <member name="M:MillerInc.Check.IsIn``1(``0,System.Collections.Generic.List{``0})">
+            <summary>
+            Checks if the element is listed in the input list
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ele">The value to search for</param>
+            <param name="values">The list of values to search through</param>
+            <returns>Returns a boolean; If ele is in values, returns true, else returns false</returns>
+        </member>
+        <member name="M:MillerInc.Check.IsIn``1(``0,``0[])">
+            <summary>
+            Checks if the element is listed in the input array
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ele">The value to search for</param>
+            <param name="values">The array of values to search through</param>
+            <returns>Returns a boolean; If ele is in values, returns true, else returns false</returns>
+        </member>
+        <member name="M:MillerInc.Check.IsIn(System.String,System.String)">
+            <summary>
+            Checks if the substring is in the total string
+            </summary>
+            <param name="sub">Smaller string that we are checking for</param>
+            <param name="total">Total string we are checking in</param>
+            <returns>If sub is in total, then return true</returns>
+        </member>
+        <member name="T:MillerInc.Convert.Classes.Loadable">
+            <summary>
+            Typicallys an inherited class that is used when the class is suppoed to be loaded back
+            </summary>
+        </member>
+        <member name="M:MillerInc.Convert.Classes.Loadable.SaveTo(System.String)">
+            <summary>
+            Saves the current stated of the class into the file specified in json format, 
+            if the file doesn't exist, it creates it
+            </summary>
+            <param name="filepath">path to file to save to (including file name and extention)</param>
+        </member>
+        <member name="M:MillerInc.Convert.Classes.Loadable.SaveToAsync(System.String)">
+            <summary>
+            Saves the current state of the class on another thread into the file specified; 
+            if the file doesn't exist, it creates a new file to store it to in json format
+            </summary>
+            <param name="filepath">path to the file to save to (including the file name and extention)</param>
+        </member>
+        <member name="T:MillerInc.Convert.Files.FileToList">
+            <summary>
+            Class that contains the methods to convert a file to a list of strings, not necessary but handles errors 
+            </summary>
+        </member>
+        <member name="M:MillerInc.Convert.Files.FileToList.FileRead(System.String)">
+            <summary>
+            New form is File Read 
+            Outdated since it is made obsolete with new functions
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MillerInc.Convert.Files.FileToList.FileToListConverter(System.String)">
+            <summary>
+            Not really Useful, considering that the function is just one line.
+            However, it does get directly the file as a list of strings
+            </summary>
+            <param name="file"> File to read</param>
+            <returns>List of each line of the file</returns>
+        </member>
+        <member name="T:MillerInc.Convert.Files.JSON_Converter">
+            <summary>
+            Contains logic to convert .json files to a usable class
+            </summary>
+        </member>
+        <member name="M:MillerInc.Convert.Files.JSON_Converter.Deserialize``1(System.String)">
+            <summary>
+            Converts a .json file from text to a class
+            </summary>
+            <typeparam name="T">The output type that you are wanting</typeparam>
+            <param name="filePath">The path to the file that 
+            you are wanting to convert</param>
+            <returns></returns>
+        </member>
+        <member name="T:MillerInc.Convert.Lists.ListConverter">
+            <summary>
+            Converts Lists from One Type to another type, there are some out of support methods here that don't have any real use; 
+            the suggested method is the ConvertTo method and typically not the overload with the conversion function 
+            </summary>
+        </member>
+        <member name="M:MillerInc.Convert.Lists.ListConverter.ConvertTo``2(System.Collections.Generic.List{``0})">
+            <summary>
+            Main Function that returns a list of objects.
+            Outdated
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TOut"></typeparam>
+            <param name="temp"></param>
+            <returns>A list of objects</returns>
+        </member>
+        <member name="M:MillerInc.Convert.Lists.ListConverter.ConEle``2(``0)">
+            <summary>
+            Converts a single element to another element of a different type
+            </summary>
+            <typeparam name="T">the input type</typeparam>
+            <typeparam name="TOut">the desired output type</typeparam>
+            <param name="temp"></param>
+            <param name="returnType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MillerInc.Convert.Lists.ListConverter.ConvertTo``2(System.Collections.Generic.List{``0},System.Func{``0,``1})">
+            <summary>
+            This is the main conversion method
+            </summary>
+            <param name="inputList">This is the list of the input type</param>
+            <param name="conversionFunc">This is the individual conversion method for the type</param>
+            <returns>The list in new type</returns>
+        </member>
+        <member name="M:MillerInc.Convert.Lists.ListToString.ListString``1(System.Collections.Generic.List{``0},System.String,System.String)">
+            <summary>
+            Converts the list to a single string with the specified seperators between the elements
+            </summary>
+            <typeparam name="T">type of in the list</typeparam>
+            <param name="inList">the list to convert to a string</param>
+            <param name="sepA">the seperator between each element of the list except for the last one </param>
+            <param name="sepB">the final seperator between elements n - 2 and n - 1 </param>
+            <returns></returns>
+        </member>
+        <member name="T:MillerInc.Convert.Strings.BoolLists">
+            <summary>
+            This is a class of the lists used to determine things as true or false, change wisely
+            </summary>
+        </member>
+        <member name="P:MillerInc.Convert.Strings.BoolLists.Yea">
+            <summary>
+            Strings that relate to true
+            </summary>
+        </member>
+        <member name="P:MillerInc.Convert.Strings.BoolLists.Ney">
+            <summary>
+            Strings that relate to false
+            </summary>
+        </member>
+        <member name="T:MillerInc.Convert.Strings.StringToBoolean">
+            <summary>
+            Currently the main algorithm for converting user input to boolean
+            To call basic use FullStrBool.GetBool
+            </summary>
+        </member>
+        <member name="M:MillerInc.Convert.Strings.StringToBoolean.GetBool(System.String)">
+            <summary>
+            Takes a user input and converts it to a boolean 
+            </summary>
+            <param name="input">The user input</param>
+            <returns>The converted boolean</returns>
+        </member>
+        <member name="M:MillerInc.Convert.Strings.StringToBoolean.TryBool(System.String)">
+            <summary>
+            Similar to TryParse, but instead of returning if whether it can be parsed, but what it can be parsed to
+            </summary>
+            <param name="input">User input</param>
+            <returns></returns>
+        </member>
+        <member name="T:MillerInc.Errors.ErrorController">
+            <summary>
+            A controller that is able to control the output of errors that relate to MillerInc projects; must have the error document installed to run properly; 
+            Not implemented in most new MillerInc Projects  
+            </summary>
+        </member>
+        <member name="M:MillerInc.Errors.ErrorController.#ctor(System.Int32)">
+            <summary>
+            Creates a new error with index given
+            </summary>
+            <param name="errorNum"></param>
+        </member>
+        <member name="M:MillerInc.Errors.ErrorController.#ctor(System.Int32,System.String)">
+            <summary>
+            Creates a new error with index given from file given
+            </summary>
+            <param name="errorNum"></param>
+            <param name="errorFile"></param>
+        </member>
+        <member name="T:MillerInc.Files.EditFile">
+            <summary>
+            Contains logic to edit files by lines
+            </summary>
+        </member>
+        <member name="M:MillerInc.Files.EditFile.EditFileLine(System.String,System.Int32,System.String)">
+            <summary>
+            Edit a single line that is specified
+            </summary>
+            <param name="file">the path to the file to edit</param>
+            <param name="lineNum">the number of the line to edit</param>
+            <param name="newLine">the string for the new line</param>
+        </member>
+        <member name="M:MillerInc.Files.EditFile.EditFileAll(System.String,System.String[])">
+            <summary>
+            Overwrites the file with the given strings 
+            </summary>
+            <param name="file">the path to the file in question</param>
+            <param name="newFile">the strings for the new file</param>
+        </member>
+        <member name="M:MillerInc.Files.EditFile.EditFileAll(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Overwrites the file with the given strings 
+            </summary>
+            <param name="file">the path to the file in question</param>
+            <param name="newFile">the strings for the new file</param>
+        </member>
+        <member name="M:MillerInc.Files.EditFile.FileAddLine(System.String,System.String)">
+            <summary>
+            Adds the given line to the file
+            </summary>
+            <param name="file">path to the file to edit</param>
+            <param name="newLine">the line to add at the end of the file</param>
+        </member>
+        <member name="T:MillerInc.Files.FileControl">
+            <summary>
+            Includes the generic file control methods
+            </summary>
+        </member>
+        <member name="M:MillerInc.Files.FileControl.SaveStreamAsFile(System.IO.Stream,System.String)">
+            <summary>
+            Creates or Opens a new file at the specified path and copies the stream to said path
+            </summary>
+            <param name="stream">Stream to copy</param>
+            <param name="filePath">FilePath to write to</param>
+        </member>
+        <member name="M:MillerInc.Files.FileControl.SaveStreamAsFile(System.IO.FileStream,System.String)">
+            <summary>
+            Creates or Opens a new file at the specified path and copies the stream to said path
+            </summary>
+            <param name="stream">Stream to copy</param>
+            <param name="filePath">FilePath to write to</param>
+        </member>
+        <member name="M:MillerInc.Files.FileControl.SaveStreamAsFile(System.IO.MemoryStream,System.String)">
+            <summary>
+            Saves the MemoryStream into a file (Meant for downloading)
+            </summary>
+            <param name="stream">Stream to save</param>
+            <param name="filePath">Path to file</param>
+        </member>
+        <member name="M:MillerInc.Files.FileControl.SaveStreamAsFileAsync(System.IO.MemoryStream,System.String)">
+            <summary>
+            Saves the MemoryStream into a file (Meant for downloading)
+            </summary>
+            <param name="stream">Stream to save</param>
+            <param name="filePath">Path to file</param>
+        </member>
+        <member name="T:MillerInc.Files.ImageHandling.OverlayShape">
+            <summary>
+            This class contains the logic in order to overlay an image with shapes
+            </summary>
+        </member>
+        <member name="M:MillerInc.Files.ImageHandling.OverlayShape.AddBox(System.String,System.String,System.String,System.Drawing.Color,System.Int32)">
+            <summary>
+            This image was indended to be used with AI model output (specifically Roboflow) 
+            and overlay the image with
+            the bounding box 
+            </summary>
+            <param name="imageOutputPath">The path and name to where you want it output. 
+            NOTE: If file already exits, 
+            it will overwrite the file</param>
+            <param name="jsonFilepath">Path to json file that follows this format. 
+            The json file should follow the class 
+            <see cref="T:MillerInc.ML.Models.InferenceOutput">InferenceOutput</see> </param>
+            <param name="originFilePath">The path to the file that you want to edit</param>
+            <param name="overlayColor">The color that you want the marks to be</param>
+            <param name="penSize">The size of the mark that you want to write with</param>
+        </member>
+        <member name="M:MillerInc.Files.ImageHandling.OverlayShape.AddBox(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Int32)">
+            <summary>
+            Adds a box over the image at the file given
+            </summary>
+            <param name="imageOutputPath">The path and name to where you want it output. 
+            NOTE: If file already exits, 
+            it will overwrite the file</param>
+            <param name="originFilePath">The path to the file that you want to edit</param>
+            <param name="x">The x-coordinate of the center of the box that you want to add</param>
+            <param name="y">The y-coordinate of the center of the box that you want to add</param>
+            <param name="height">The total height of the box that you want to add</param>
+            <param name="width">The total width of the box that you want to add</param>
+            <param name="overlayColor">The color that you want to overlay</param>
+            <param name="penSize">The width of the pen that you want to use</param>
+        </member>
+        <member name="M:MillerInc.Files.ImageHandling.OverlayShape.AddBox(System.Drawing.Bitmap,System.Single,System.Single,System.Single,System.Single,System.Drawing.Color,System.Int32)">
+            <summary>
+            Adds a box overtop the bitmap that is input through the function
+            </summary>
+            <param name="bitmap">the source bitmap </param>
+            <param name="centerOfBoxX">the x coordinate of the center of the box</param>
+            <param name="centerOfBoxY">the y coordinate of the center of the box</param>
+            <param name="width">the width of the box</param>
+            <param name="height">this height of the box</param>
+            <param name="overlayColor">the color to overlay the box with</param>
+            <param name="penSize">this size of the pen to use</param>
+            <returns></returns>
+        </member>
+        <member name="M:MillerInc.Files.ImageHandling.OverlayShape.AddBox(System.Drawing.Bitmap,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Drawing.Color)">
+            <summary>
+            Adds a box overtop the bitmap that is input through the function
+            </summary>
+            <param name="bitmap">the source bitmap </param>
+            <param name="topLeftX">the x coordinate of the top left corner of the box</param>
+            <param name="topLeftY">the y coordinate of the top left corner of the box</param>
+            <param name="width">the width of the box</param>
+            <param name="height">the height of the box</param>
+            <param name="penSize">the size of the pen</param>
+            <param name="overlayColor">the color to  overlay the box as</param>
+            <returns></returns>
+        </member>
+        <member name="T:MillerInc.Methods.BubbleSort">
+            <summary>
+            Class that contains the logic for sorting different forms of arrays from least to greatest
+            </summary>
+        </member>
+        <member name="M:MillerInc.Methods.BubbleSort.OptimizedBubbleSort(System.Int32[])">
+            <summary>
+            Sorts a list of integers 
+            </summary>
+            <param name="arr">the array to sort</param>
+            <returns>the sorted array</returns>
+        </member>
+        <member name="M:MillerInc.Methods.BubbleSort.OptimizedBubbleSort(System.Collections.Generic.List{System.IComparable})">
+            <summary>
+            If an object is comparable, it can be sorted, this algorithm sorts the list from least to greatest
+            </summary>
+            <param name="list">IComparable List that can be sorted</param>
+            <returns>sorted list</returns>
+        </member>
+        <member name="T:MillerInc.Methods.Lists.MultiDimensionalArrayConverter">
+            <summary>
+            Contains the logic to covnert multi-dimensional lists to arrays and arrays to lists
+            </summary>
+        </member>
+        <member name="M:MillerInc.Methods.Lists.MultiDimensionalArrayConverter.Convert3DArr``1(``0[][][])">
+            <summary>
+            Converts a three-dimensional array to a three-dimensional list
+            </summary>
+            <typeparam name="T">the type of the array</typeparam>
+            <param name="arr">the array to convert</param>
+            <returns>the converted list</returns>
+        </member>
+        <member name="M:MillerInc.Methods.Lists.MultiDimensionalArrayConverter.Convert3DList``1(System.Collections.Generic.List{System.Collections.Generic.List{System.Collections.Generic.List{``0}}})">
+            <summary>
+            Converts a three-dimensional list to a three-dimensional array
+            </summary>
+            <typeparam name="T">type of the list</typeparam>
+            <param name="list">the list to convert</param>
+            <returns>the converted array</returns>
+        </member>
+        <member name="M:MillerInc.ML.ReinforcementLearning.NeuralNetwork.#ctor">
+            <summary>
+            Creates a new neural network w/o errors, structure is automatically set to 1, 1, 1
+            </summary>
+        </member>
+        <member name="M:MillerInc.ML.ReinforcementLearning.NeuralNetwork.#ctor(System.Collections.Generic.IReadOnlyList{System.Int32})">
+            <summary>
+            Initializes the neural network based off of the given structure
+            </summary>
+            <param name="structure">the structure of the network in the following format: 
+            { # of inputLayer nodes, # of hidden layer nodes, (can repeat previous for 
+            how many desired layers), # of output layer nodes } </param>
+        </member>
+        <member name="M:MillerInc.ML.ReinforcementLearning.NeuralNetwork.#ctor(System.String)">
+            <summary>
+            Init a new network with the given json file
+            </summary>
+            <param name="filePath">path to json file *MUST BE IN CORRECT FORMAT*</param>
+        </member>
+        <member name="M:MillerInc.ML.ReinforcementLearning.NeuralNetwork.Test(System.Single[])">
+            <summary>
+            This is supposed to be a function that makes an inference what the output will
+            be based off of what its current biases and weights are
+            </summary>
+            <param name="inputs"></param>
+            <returns>Values of the output nodes</returns>
+        </member>
+        <member name="M:MillerInc.ML.ReinforcementLearning.NeuralNetwork.Train(System.Single[][],System.Single[][])">
+            <summary>
+            This function is supposed to take the outputs that relate to the inputs
+            and change the weights and biases to match the state of the environment
+            </summary>
+            <param name="trainingInputs">This is supposed to be a list of all 
+            the values of the input nodes that go with the outputs </param>
+            <param name="trainingOutputs">This is supposed to be a list of all
+            the values of the output nodes that go with the correlating inputs
+            </param>
+        </member>
+        <member name="T:MillerInc.Net.Downloader">
+            <summary>
+            The Downloader class is used to download files from the internet with the given url
+            </summary>
+        </member>
+        <member name="M:MillerInc.Net.Downloader.ThreadedDownload(System.String,System.String)">
+            <summary>
+            Downloads a specific file from the server
+            </summary>
+            <param name="url">the url to the file</param>
+            <param name="path">the path to save the file to</param>
+        </member>
+        <member name="M:MillerInc.Net.Downloader.DownloadFileAsync(System.String,System.String)">
+            <summary>
+            Downloads a specific file from the server
+            </summary>
+            <param name="url">the url to the file</param>
+            <param name="path">the path to save the file to</param>
+        </member>
+        <member name="P:MillerInc.Net.GoogleDrive.GoogleDriveControl.Credentials">
+            <summary>
+            The stored credentials for the class
+            </summary>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.SetCredentials(Google.Apis.Auth.OAuth2.GoogleCredential)">
+            <summary>
+            Sets the credentials and creates a new service
+            </summary>
+            <param name="credential"></param>
+        </member>
+        <member name="P:MillerInc.Net.GoogleDrive.GoogleDriveControl.KeyFile">
+            <summary>
+            The File from which the authentication is derived
+            </summary>
+        </member>
+        <member name="P:MillerInc.Net.GoogleDrive.GoogleDriveControl.DriveServ">
+            <summary>
+            The DriveServ with autonomously created credentials
+            </summary>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.NewService">
+            <summary>
+            Sets up a new DriveServ from the file that has already been defined
+            </summary>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.SetCredentials(System.String)">
+            <summary>
+            Sets up a new Drive service and sets new key
+            </summary>
+            <param name="keyFile">The path to the keyfile</param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.NewService(Google.Apis.Auth.OAuth2.GoogleCredential)">
+            <summary>
+            Sets up a new DriveServ from the credentials pre-defined
+            </summary>
+            <param name="credential"></param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.DownloadFile(Google.Apis.Drive.v3.Data.File,System.String)">
+            <summary>
+            Downloads the Google File input to the output path
+            </summary>
+            <param name="file">The Google File that is to be downloaded</param>
+            <param name="outputPath">The output path that the file is dumped</param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.DownloadFile(System.String,System.String)">
+            <summary>
+            Class method that uses the pre-existing service to download the file to the output location
+            </summary>
+            <param name="fileName">The name or id of the file</param>
+            <param name="outputPath">The output file path</param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.DownloadFileAsync(System.String,System.String)">
+            <summary>
+            Downloads the specified file to the output file
+            </summary>
+            <param name="fileName">The name or Id of the file that is being downloaded</param>
+            <param name="outputPath">The path to the file that the output is copied to</param>
+            <param name="keyFile">Path to the keyFile</param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.GetFiles">
+            <summary>
+            Gets a list of the files in drive and stores them and metadata in the list
+            </summary>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.CheckCompat(Google.Apis.Drive.v3.Data.File)">
+            <summary>
+            Checks if the File able to be downloaded to the current device
+            </summary>
+            <param name="file">The file that is to be checked</param>
+            <returns>The boolean of compatibility</returns>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.DownloadFileAsync(System.String,System.String,System.String)">
+            <summary>
+            This is the Function that can be used async or sync just follow the DownloadHandler style
+            </summary>
+            <param name="fileName">Name of File to Search and download</param>
+            <param name="outputPath">Path of File to download to</param>
+            <param name="keyFile">Path to key file</param>
+            <returns></returns>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.DownloadFile(Google.Apis.Drive.v3.Data.File,System.String,System.String)">
+            <summary>
+            Downloads a file from the drive without creating a new object
+            </summary>
+            <param name="file">The GoogleFileStore specified for downloading</param>
+            <param name="outputPath">The output location for the download data</param>
+            <param name="keyFile">The path to the key file</param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.DownloadFile(System.String,System.String,System.String)">
+            <summary>
+            Downloads the specified file to the output file
+            </summary>
+            <param name="fileName">The name or Id of the file that is being downloaded</param>
+            <param name="outputPath">The path to the file that the output is copied to</param>
+            <param name="keyFile">Path to the keyFile</param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.DeleteFile(System.String,System.String)">
+            <summary>
+            Deletes the file specified
+            </summary>
+            <param name="fileName">The Name or Id of the file</param>
+            <param name="keyFile">The path to the keyFile</param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.DeleteFileAsync(System.String,System.String)">
+            <summary>
+            Deletes the file specified
+            </summary>
+            <param name="fileName">The Name or Id of the file</param>
+            <param name="keyFile">The path to the keyFile</param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.GetFileId(System.String,System.String)">
+            <summary>
+            Returns the fileId of the file given
+            </summary>
+            <param name="fileName">Name or Id of the file on Google Drive</param>
+            <param name="keyFile">Path to the Key File</param>
+            <returns></returns>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.ShareFileWithUser(System.String,System.String,System.String,System.String)">
+            <summary>
+            Shares the file with the specified person
+            </summary>
+            <param name="fileName"></param>
+            <param name="userEmail"></param>
+            <param name="keyFile"></param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.ShareFileWithUserAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            Shares the file with the specified person
+            </summary>
+            <param name="fileName"></param>
+            <param name="userEmail"></param>
+            <param name="keyFile"></param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.UploadFile(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Uploads the file to google drive 
+            </summary>
+            <param name="fileName">The name of the uploaded file</param>
+            <param name="filePath">The path to the uploaded file on the local drive</param>
+            <param name="keyFile">The path to the keyFile </param>
+            <param name="parentFolder">name of the parent folder</param>
+            <param name="description">Description of the file to upload</param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.UploadFileAsync(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Uploads the file to google drive 
+            </summary>
+            <param name="fileName">The name of the uploaded file</param>
+            <param name="filePath">The path to the uploaded file on the local drive</param>
+            <param name="keyFile">The path to the keyFile </param>
+            <param name="parentFolder">name of the parent folder</param>
+            <param name="description">Description of the file to upload</param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.GetMIMEFromExtension(System.String)">
+            <summary>
+            Gets the Google Drive MIME Type associated with the extension provided
+            </summary>
+            <param name="extension">The extension to compare with the MIME types</param>
+            <returns>Google Drive MIME Type</returns>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.NewService(System.String)">
+            <summary>
+            Gets a new driveservice from the specified file key
+            </summary>
+            <param name="keyFile">The path to the key file</param>
+            <returns>A new DriveServ</returns>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveControl.ToString">
+            <summary>
+            Override ToString method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MillerInc.Net.GoogleDrive.GoogleDriveController">
+            <summary>
+            Contains the controller methods for 
+            accessing Google Drive
+            </summary>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveController.#ctor">
+            <summary>
+            Creates a new Instance of GoogleControl. GoogleControl Initializes the Credentials 
+            using the file listed in the project output folder (Make sure to include that) and 
+            then sets up the read/write system
+            </summary>
+        </member>
+        <member name="F:MillerInc.Net.GoogleDrive.GoogleDriveController.ServPath">
+            <summary>
+            Must Include the stated file in the output folder
+            </summary>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveController.FILES(System.Boolean)">
+            <summary>
+            Gets the Files that were retrieved with the GetFiles();
+            Must Confirm the Action 
+            </summary>
+            <param name="conf"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+            <exception cref="T:System.AccessViolationException"></exception>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveController.GetFilesAsync">
+            <summary>
+            Gets a List of the Files that are available, Stores them in Output.txt, Asyncronous Operation
+            and can be viewed with FILES()
+            </summary>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveController.GetFiles">
+            <summary>
+            Gets a List of the Files that are available, Stores them in Output.txt
+            and can be viewed with FILES()
+            </summary>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveController.GetFilesAsync(System.Double)">
+            <summary>
+            Confirmation Code: 3.1415901010101010101010101010101010101010101010101
+            </summary>
+            <param name="ConfirmationCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveController.DeleteFiles">
+            <summary>
+            Delete Files Dowloaded
+            </summary>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveController.DeleteFiles(System.Collections.Generic.List{System.String})">
+            <summary>
+            Delete files downloaded
+            </summary>
+            <param name="files"></param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveController.DeleteFiles(System.String[])">
+            <summary>
+            Delete the files downloaded
+            </summary>
+            <param name="files"></param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveController.GetFilestream(System.String)">
+            <summary>
+            Gets file from  Drive (Shared Included)
+            </summary>
+            <param name="fileName"></param>
+            <returns>File Stream of Open Path, after downloading the file</returns>
+            <exception cref="T:System.IO.FileNotFoundException"></exception>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveController.GetFile(System.String)">
+            <summary>
+            Gets file from  Drive (Shared Included)
+            </summary>
+            <param name="fileName"></param>
+            <param name="OutputFile"></param>
+            <returns>File Stream of Open Path, after downloading the file</returns>
+            <exception cref="T:System.IO.FileNotFoundException"></exception>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveController.GetFileStream(System.String)">
+            <summary>
+            Gets file from  Drive (Shared Included)
+            </summary>
+            <param name="fileName"></param>
+            <param name="OutputFile"></param>
+            <returns>File Stream of Open Path, after downloading the file</returns>
+            <exception cref="T:System.IO.FileNotFoundException"></exception>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveController.Example">
+            <summary>
+            Containts implementation code for Downloading file
+            var t = new Thread(() => DriveController.GetFileStream("usernames.txt", "usernames.txt"));
+            t.Start();
+            </summary>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveController.PrintFiles">
+            <summary>
+            Prints a list of the files in specified drive
+            </summary>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveController.GetFilesAsList">
+            <summary>
+            Gets a list of the Google Files (including non-txt items)
+            </summary>
+            <returns>List of GoogleFiles</returns>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.#ctor(Google.Apis.Drive.v3.Data.File)">
+            <summary>
+            Creates a new instance of the file editor
+            </summary>
+            <param name="googleFile">The reference to the GoogleFileStore</param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.#ctor(Google.Apis.Drive.v3.Data.File,System.String)">
+            <summary>
+            Creates a new instance of the file editor
+            </summary>
+            <param name="googleFile">Reference to the GoogleFileStore that you want to edit</param>
+            <param name="keyFile">Path to the KeyFile</param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new FileEditor Instance with the fileName or Id and specifed key file
+            </summary>
+            <param name="fileName">Name of the file that you want to edit</param>
+            <param name="keyFile">Path to the Key File</param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.#ctor(System.String)">
+            <summary>
+            Creates a new Instance of the File Editor
+            </summary>
+            <param name="fileName">Name of the file that you want to edit</param>
+        </member>
+        <member name="P:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.GoogleFileStore">
+            <summary>
+            The Stored GoogleFile
+            </summary>
+        </member>
+        <member name="P:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.FileName">
+            <summary>
+            The Name of the file
+            </summary>
+        </member>
+        <member name="P:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.FileId">
+            <summary>
+            The Id Of the File
+            </summary>
+        </member>
+        <member name="P:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.KeyFile">
+            <summary>
+            The Path to the KeyFile
+            </summary>
+        </member>
+        <member name="P:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.DriveServ">
+            <summary>
+            The DriveService for the specific drive
+            </summary>
+        </member>
+        <member name="P:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.Lines">
+            <summary>
+            The List of all the lines that are in the file
+            </summary>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.GetFile(System.String)">
+            <summary>
+            Gets the GoogleFileStore with the predetermined GoogleService Created
+            </summary>
+            <param name="fileName">The name or Id of the file</param>
+            <returns>The data and reference to the Google File</returns>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.NewService">
+            <summary>
+            Gets a new driveservice from the specified file key
+            </summary>
+            <param name="keyFile">The path to the key file</param>
+            <returns>A new DriveServ</returns>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.WriteLine(System.String)">
+            <summary>
+            Appends a line to the end of the file
+            </summary>
+            <param name="line">The line to append to the file</param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.Write(System.String)">
+            <summary>
+            Appends text to the end of the last line
+            </summary>
+            <param name="text">The text to append to the file</param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.WriteLine(System.String,System.Int32)">
+            <summary>
+            Appends text to end of the line specified
+            </summary>
+            <param name="text">The Text to overwrite the line</param>
+            <param name="line">The index of the line</param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.OverWrite(System.Collections.Generic.List{System.String})">
+            <summary>
+            Over-Writes the entire file
+            </summary>
+            <param name="lines">The entire data of the file that will overwrite the file with</param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.OverWriteLine(System.String)">
+            <summary>
+            Over-Writes the last line in the file
+            </summary>
+            <param name="line">The Text to overwrite with </param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.OverWriteLine(System.String,System.Int32)">
+            <summary>
+            Overwrites the specified line
+            </summary>
+            <param name="line">The text of to be overwriting the line</param>
+            <param name="lineNum">The index of the line to be overwritten</param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.InsertLine(System.String,System.Int32)">
+            <summary>
+            Inserts the line at the index given 
+            </summary>
+            <param name="line">The line that is going to inserted</param>
+            <param name="index">he Index of the line where it is suppoesed to be inserted</param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.DeleteLine(System.Int32)">
+            <summary>
+            Deletes the line at the given index
+            </summary>
+            <param name="index">Index of line to delete</param>
+        </member>
+        <member name="M:MillerInc.Net.GoogleDrive.GoogleDriveFileEditor.UpdateFile">
+            <summary>
+            Updates the file and uploads the changes
+            </summary>
+        </member>
+        <member name="T:MillerInc.UI.ControlModels.ExitControl">
+            <summary>
+            This class is for controlling the types of shutdown for applications, 
+            which can help with loops and such
+            </summary>
+        </member>
+        <member name="T:MillerInc.UI.OutputFile.Output">
+            <summary>
+            Class that contains the logic to output to files like one would a console
+            </summary>
+        </member>
+        <member name="M:MillerInc.UI.OutputFile.Output.#ctor">
+            <summary>
+            Creates new Output, nothing Pre-Declared
+            </summary>
+        </member>
+        <member name="M:MillerInc.UI.OutputFile.Output.#ctor(System.String)">
+            <summary>
+            Creates a new Output with filepath pre-declared
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:MillerInc.UI.OutputFile.Output.ChangeFilePath(System.String)">
+            <summary>
+            Changes the file path of the document, if it doesn't exist, creates new file ouput
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:MillerInc.UI.OutputFile.Output.Write(System.String)">
+            <summary>
+            Writes the value into the file, does not return line
+            </summary>
+            <param name="value"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:MillerInc.UI.OutputFile.Output.WriteLine(System.String)">
+            <summary>
+            Writes the entered value into the file and returns a line
+            </summary>
+            <param name="value"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:MillerInc.UI.OutputFile.Output.Read">
+            <summary>
+            Reads the entire Output file
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MillerInc.UI.OutputFile.Output.Read(System.Int32)">
+            <summary>
+            Reads the specific line in output file, if line entered is negative, reads backwards that many lines
+            </summary>
+            <param name="line"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MillerInc.UI.OutputFile.Output.ReadAll">
+            <summary>
+            Reads the entire output file
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MillerInc.UI.OutputFile.Output.ReadBack(System.Int32)">
+            <summary>
+            Reads Backwards up the file the amount of lines specified
+            </summary>
+            <param name="line"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MillerInc.UI.OutputFile.Output.Clear(System.String,System.Boolean)">
+            <summary>
+            Clears the Output file at the path, to confirm, requires path and true
+            </summary>
+            <param name="path"></param>
+            <param name="confirm"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.AccessViolationException"></exception>
+        </member>
+        <member name="M:MillerInc.UI.OutputFile.Output.Delete(System.Int32,System.Boolean)">
+            <summary>
+            Deletes Specific Line in the Output file, it does require the path and confirmation
+            </summary>
+            <param name="line"></param>
+            <param name="confirm"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.AccessViolationException"></exception>
+        </member>
+        <member name="M:MillerInc.UI.OutputFile.Output.Close">
+            <summary>
+            Unnecessary, but it will reset the Output file to null
+            </summary>
+        </member>
+        <member name="M:MillerInc.UI.OutputFile.Output.Write(System.String,System.String)">
+            <summary>
+            Specific instance of output, where the output is directly written into the file
+            </summary>
+            <param name="path"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:MillerInc.UI.OutputFile.Output.WriteLine(System.String,System.String)">
+            <summary>
+            Specific instance of output, where the output is directly writing a new line into file
+            </summary>
+            <param name="path"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:MillerInc.UI.OutputFile.Output.ChToBy(System.Char[])">
+            <summary>
+            Converts a char array to a byte array
+            </summary>
+            <param name="chars"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
