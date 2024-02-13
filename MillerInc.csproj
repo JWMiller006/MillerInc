@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <ApplicationIcon>Logo-simple.ico</ApplicationIcon>
-    <SignAssembly>True</SignAssembly>
+    <SignAssembly>False</SignAssembly>
     <Authors>Miller Inc; J W Miller</Authors>
     <Copyright>2023</Copyright>
     <Description>New version of MillerInc.CSLibrary, used for creating .NET apps</Description>
@@ -33,6 +33,8 @@ Original Release: Change namespaces</PackageReleaseNotes>
     <NeutralLanguage>en</NeutralLanguage>
     <AssemblyVersion>1.0.3.0</AssemblyVersion>
     <FileVersion>1.0.3.0</FileVersion>
+    <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Logo-simple.ico" />
@@ -46,11 +48,11 @@ Original Release: Change namespaces</PackageReleaseNotes>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Apis" Version="1.64.0-alpha01" />
-    <PackageReference Include="Google.Apis.Auth" Version="1.64.0-alpha01" />
-    <PackageReference Include="Google.Apis.Drive.v3" Version="1.63.0.3155" />
+    <PackageReference Include="Google.Apis" Version="1.66.0" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.66.0" />
+    <PackageReference Include="Google.Apis.Drive.v3" Version="1.66.0.3296" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="System.Drawing.Common" Version="8.0.0-rc.2.23479.14" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.1" />
   </ItemGroup>
 
   <ItemGroup>
