@@ -5,7 +5,7 @@
     <ApplicationIcon>Logo-simple.ico</ApplicationIcon>
     <SignAssembly>False</SignAssembly>
     <Authors>Miller Inc; J W Miller</Authors>
-    <Copyright>2023</Copyright>
+    <Copyright>2024</Copyright>
     <Description>New version of MillerInc.CSLibrary, used for creating .NET apps</Description>
     <PackageIcon>Logo-simple.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -31,20 +31,19 @@ Release 1.0.1.1: Add documentation; Add ML.ReinforcementLearning namespace; Add 
 
 Original Release: Change namespaces</PackageReleaseNotes>
     <NeutralLanguage>en</NeutralLanguage>
-    <AssemblyVersion>1.0.3.0</AssemblyVersion>
-    <FileVersion>1.0.3.0</FileVersion>
+    <AssemblyVersion>1.0.4.1</AssemblyVersion>
+    <FileVersion>1.0.4.1</FileVersion>
     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+  </PropertyGroup>
   <ItemGroup>
     <Content Include="Logo-simple.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="..\..\..\..\Shared\Logo-simple.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -56,6 +55,10 @@ Original Release: Change namespaces</PackageReleaseNotes>
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Logo-simple.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Update="README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
