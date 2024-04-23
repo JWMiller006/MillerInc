@@ -1,6 +1,8 @@
-﻿# MillerInc Library for C#
+# MillerInc Library for C#
 
 This library is the updated, NetStandard version of MillerInc.CSLibrary (out of support)
+
+## Due to previous commitments, development on this repo is slowed
 
 # Releases
 
