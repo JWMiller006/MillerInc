@@ -7,14 +7,14 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "MillerInc/1.0.3.0": {
+      "MillerInc/1.0.4.0": {
         "dependencies": {
           "Google.Apis": "1.66.0",
           "Google.Apis.Auth": "1.66.0",
           "Google.Apis.Drive.v3": "1.66.0.3296",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "13.0.3",
-          "System.Drawing.Common": "8.0.1"
+          "System.Drawing.Common": "8.0.6"
         },
         "runtime": {
           "MillerInc.dll": {}
@@ -89,11 +89,11 @@
           }
         }
       },
-      "System.Drawing.Common/8.0.1": {
+      "System.Drawing.Common/8.0.6": {
         "runtime": {
           "lib/netstandard2.0/System.Drawing.Common.dll": {
             "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.123.58006"
+            "fileVersion": "8.0.624.26909"
           }
         }
       },
@@ -111,7 +111,7 @@
     }
   },
   "libraries": {
-    "MillerInc/1.0.3.0": {
+    "MillerInc/1.0.4.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -172,12 +172,12 @@
       "path": "system.codedom/7.0.0",
       "hashPath": "system.codedom.7.0.0.nupkg.sha512"
     },
-    "System.Drawing.Common/8.0.1": {
+    "System.Drawing.Common/8.0.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-x0rAZECxIGx/YVjN28YRdpqka0+H7YMN9741FUDzipXPDzesd60gef/LI0ZCOcYSDsacTLTHvMAvxHG+TjbNNQ==",
-      "path": "system.drawing.common/8.0.1",
-      "hashPath": "system.drawing.common.8.0.1.nupkg.sha512"
+      "sha512": "sha512-aSwRnJzz6fZ73JvWMMG0KvBwOnXsBTFtfHLriQyAPrDIZ+NrDfl15GWbO/A35k0dtH77D7jfxzEcFF7RONtU/w==",
+      "path": "system.drawing.common/8.0.6",
+      "hashPath": "system.drawing.common.8.0.6.nupkg.sha512"
     },
     "System.Management/7.0.2": {
       "type": "package",
