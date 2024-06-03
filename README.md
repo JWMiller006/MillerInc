@@ -1,15 +1,17 @@
 # MillerInc Library for C#
-
-This library is the updated, NetStandard version of MillerInc.CSLibrary (out of support)
+A library for programming any type of application in C# that is used in most, if not all of Miller Inc programs. 
 
 ## Due to previous commitments, development on this repo is slowed
+A physics engine and some other game software is in the works, may be a while before each is able to have something added to this library, but I will as time continues. 
 
 # Releases
 
 See releases page 
 https://github.com/JWMiller006/MillerInc/releases/
 
-Release 1.0.3.0: Add new class in ~.Methods.Lists for converting lists to arrays and back, with the plan to add support for more than just three dimensions; I have started a physics namespace seperately and parts of that will be added in the coming months; 
+Release 1.0.4.0: Rebuild the library with newer language version and updated Nuget packages
+
+Release 1.0.3.0: Add new class in ~.Methods.Lists for converting lists to arrays and back, with the plan to add support for more than just three dimensions
 
 Release 1.0.2.1: Add parts of MillerInc.NeuralNetwork into ML.ReinforcementLearning and new namespace Methods with BubbleSort and Copy
 
